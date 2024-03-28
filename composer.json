@@ -1,0 +1,30 @@
+{
+    "name": "rscmedia/country-flag-icons",
+    "description": "Country flags for PHP",
+    "autoload": {
+        "psr-4": {
+            "Rscmedia\\": "src/"
+        },
+        "files": [
+            "src/RscmediaFlags.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Rob MacKay",
+            "email": "robskiwarrior@gmail.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.34"
+    },
+    "scripts": {
+        "test": "./vendor/bin/pest",
+        "install-resources": "mkdir -p ./public/assets cp -r ./flags public/flags"
+    }
+}
